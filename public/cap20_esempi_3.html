@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <script>
+        var fs = require("fs");
+
+        fs.readFile("file.txt", "utf8", function(error, text) {
+            if(error) throw error;
+            console.log("The file contained:" , text);
+        });
+    </script>
+
+    <script>
+        var fs = require("fs");
+
+        fs.readFile("file.txt", "utf8", function(error, buffer) {
+            if(error) throw error;
+            console.log("The file contained", buffer.length, "bytes.","The first byte is:", buffer[0]);
+        });
+    </script>
+
+    <script>
+        var fs = require("fs");
+
+        fs.writeFile("graffiti.txt", "Node was here", function(err) {
+            if(err) console.log("Failed to write file: ", err);
+            else console.log("The written");
+        });
+    </script>
+
+    <script>
+        var fs = require("fs");
+        console.log(fs.readFileSync("file.txt", "utf8");
+
+    </script>
+
+</body>
+</html>
